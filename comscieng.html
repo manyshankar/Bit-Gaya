@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT</title>
+  <link rel="icon" type="image/png" href="picture/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .department {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.department h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 320px;        
+  background: #4ba3ab;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease;
+}
+
+
+.profile-card:hover {
+  transform: translateY(-6px);
+}
+
+.profile-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 14px;
+}
+
+.profile-card h3 {
+  margin: 8px 0 4px;
+  color: #000;
+}
+
+.profile-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #111;
+}
+
+.social-links {
+  margin-top: 14px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: orangered;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .department {
+    padding: 10px;
+  }
+
+  .department h2 {
+    font-size: 22px;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+  </style>
+  
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo-section">
+      <a href="#"><img src="picture/BIT LOGO.png" alt="Logo"></a>
+      <a href="#" class="logo">Budhha Institute Of Technology</a>
+    </div>
+</div>
+<div class="navbar1">
+<div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div> 
+    <div class="menu">
+      <a href="index.html" class="link">HOME</a>
+      <a href="https://sbte.bihar.gov.in/" class="link">SBTE</a>
+      <a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/" class="link">MNSSBY</a>
+      <a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607" class="link">DigiLocker</a>
+       <a href="https://sbteonline.bihar.gov.in/login" class="link">EMS Portal</a>
+        <a href="https://sbtelms.bihar.gov.in/" class="link">LMS Portal</a>
+      <a href="mydoc.html" class="link btn">MY DOCUMENT</a>
+      <a href="Contact.html" class="link">Contact</a>
+    </div>
+  </div>
+
+  <div class="sub-navbar">
+<div class="dropdown-toggle" onclick="toggledropdown()">
+  <i class="fas fa-bars"></i>
+</div>
+    <div class="dropdown">
+    <a href="#" class="dropbtn" onclick="openSub(this, event)">Institute ▾</a>
+    <div class="dropdown-content">
+      <a href="About.html">About</a>
+    <a href="facility.html">Facility</a>
+    <a href="Gallery.html">Service</a>
+     <a href="rules.html">Rules</a>
+       <a href="engineering.html">Engineering</a>
+        <a href="service.html">Gallery</a>
+    </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">Admission ▾</a>
+      <div class="dropdown-content">
+        <a href="admission.html">Admission</a>
+        <a href="free.html">Fees Structure</a>
+        <a href="admissionEligi.html">Admission Eligibility</a>
+           <a href="studentform.html">Apply here</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Diploma ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="mech.html">Machanical Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">B-TECH ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Academics ▾</a>
+      <div class="dropdown-content">
+        <a href="https://sbte.bihar.gov.in/academic-calendar">Academic Calendar</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Registration</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Enrollments</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Exam Result</a>
+        <a href="https://sbte.bihar.gov.in/e-content-virtual-labs">E-Content & Virtual Labs</a>
+        <a href="https://sbte.bihar.gov.in/previous-year-questions">Previous Year Questions</a>
+        <a href="https://sbte.bihar.gov.in/question-answer-key">Question Answer Key</a>
+      </div>
+    </div>
+    </div>
+  </div><br>
+
+  <div class="main-container">
+    <div class="card5">
+      <div class="card">
+        <img src="picture/Computer-Science-Engineering 1.jpg" class="img1">
+      </div>
+    </div>
+  </div>
+<hr>
+ 
+
+ <section class="department">
+  <h2>Computer Science Engineering Department</h2>
+
+  <div class="profile-container">
+    <!-- HOD -->
+    <div class="profile-card">
+      <img src="picture/neha.jpeg" alt="HOD">
+      <h3>Ms. Neha Kumari</h3>
+      <p><b>HOD – CSE</b></p>
+      <p>📧 nehabitgaya77@gmail.com</p>
+      <p>📞 +91 8969522008</p>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/8969522008" target="_blank" class="whatsapp">
+       <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+
+    <!-- Mentor -->
+    <div class="profile-card">
+      <img src="picture/ruchi.jpeg" alt="Mentor">
+      <h3>Ms.  Ruchi Kumari</h3>
+      <p><b>Mentor – CSE</b></p>
+      <p>📧 ruchi821303@gmail.com</p>
+      <p>📞 +91 6202035100</p>
+
+       <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/6202035100" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+    <!-- Faculty -->
+    <div class="profile-card">
+      <img src="picture/profile.jpg" alt="Faculty">
+      <h3>Ms. Anamika Kumari</h3>
+      <p><b>Lecturer – CSE</b></p>
+      <p>📧 anamikabitgaya01@gmail.com</p>
+      <p>📞 +91 0000000000</p>
+
+        <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+
+    <!-- Faculty -->
+    <div class="profile-card">
+      <img src="picture/profile.jpg" alt="Faculty">
+      <h3>Er. Sham Kumar</h3>
+      <p><b>Lecturer – CSE</b></p>
+      <p>📧 shambitgaya@01gmail.com</p>
+      <p>📞 +91 7319865225</p>
+
+        <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/7319865225" target="_blank" class="whatsapp">
+       <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+
+      <!-- Faculty -->
+    <div class="profile-card">
+      <img src="picture/profile.jpg" alt="Faculty">
+      <h3>Mr. Rajeev Kumar</h3>
+      <p><b>Lecturer – CSE</b></p>
+      <p>📧rajeevbitgaya01@gmail.com</p>
+      <p>📞 +91 6200384108</p>
+
+        <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/6200384108" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+
+        <!-- Faculty -->
+    <div class="profile-card">
+      <img src="picture/balmukund.png" alt="Faculty">
+      <h3>Mr. Balmukund Mishra</h3>
+      <p><b>Lecturer – CSE</b></p>
+      <p>📧 balmukudbitgaya@01gmail.com</p>
+      <p>📞 +91 9693732524</p>
+
+        <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/9693732524" target="_blank" class="whatsapp">
+       <i class="fab fa-whatsapp"></i>
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Best Education</h3>
+        <p> Visit The Budhha Institute Of Technology
+          :- Plot No : B-3 (P), Industrial Area, Gaya NH:22, Gaya-Dobhi Road, Near Tekuna Farm, Gaya Bihar - 823004!</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="https://sbte.bihar.gov.in/">SBTE</a></li>
+          <li><a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/">MNSSBY</a></li>
+            <li><a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607">DigiLocker</a></li>
+              <li><a href="https://sbteonline.bihar.gov.in/login">EMS Portal</a></li>
+                <li><a href="https://sbtelms.bihar.gov.in/">LMS Portal</a></li>
+          <li><a href="mydoc.html">MY DOCUMENT</a></li>
+           <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Gaya, Bihar - 823004</p>
+        <p>📞 +91-9006246620</p>
+        <p>📧 manushankar1318@gmail.com</p>
+
+  <div class="footer-social">
+    <a href="https://www.instagram.com/many.shan.kar/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/manu.shankar.875023" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/manushankar1318" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <div class="footer-social">
+    <a href="https://www.linkedin.com/in/manushankar-kumar-7b51a1322/?skipRedirect=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/manyshankar" target="_blank"><i class="fab fa-github"></i></a>
+   </div>
+   </div>
+   </div>
+
+    <div class="footer-bottom">
+      <p>2026 Buddha Institute of Technology Gaya | Designed by Manushankar Kumar</p>
+    </div>
+  </footer>
+
+  <script>
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("show");
+}
+
+function toggledropdown() {
+  document.querySelector(".sub-navbar").classList.toggle("show");
+}
+function openSub(el, e) {
+  e.preventDefault(); 
+  const parent = el.parentElement;
+
+  document.querySelectorAll(".sub-navbar .dropdown")
+    .forEach(d => {
+      if (d !== parent) d.classList.remove("open");
+    });
+  parent.classList.toggle("open");
+}
+</script>
+
+</body>
+
+</html>
