@@ -56,7 +56,7 @@ body {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
   margin-right: 20px;
 }
 
@@ -87,7 +87,7 @@ body {
   z-index: 2000;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   padding: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -457,47 +457,18 @@ a:hover {
 .dots span.active {
   background: #333;
 }
-
-
-
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-  .logo-section {
-      align-items: flex-start;
-      width: 100%;
-      margin-bottom: 10px;
-  }
-  .menu {
-      align-items: flex-start;
-      width: 100%;
-  }
-  
-
-  .footer-container {
-      flex-direction: column;
-      text-align: center;
-  }
-  iframe {
-      width: 100% !important;
-      height: 300px !important;
-  }
-}
-
-.menu-toggle {
-  display: none;
+.menu-toggle { 
+  display: none; 
   font-size: 26px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 
 /* MOBILE VIEW */
 @media (max-width: 768px) {
 
   body {
-    padding-top: 0px;
-      overflow: auto;
+   padding-top: 110px;
+  overflow: auto;
   }
 
   .navbar {
@@ -505,6 +476,11 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1px 28px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 7000;  
+    background: rgb(255, 255, 255);
   }
 
   .logo-section {
@@ -514,36 +490,37 @@ a:hover {
   }
 
   .logo-section img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 
   .logo {
-    font-size: 20px;
+    font-size: 16px;
   }
   .navbar1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1px 1px;
+    
   }
   .menu-toggle {
     display: block;
     color: rgb(44, 156, 216);
-    margin-left: auto;
-    padding-right: 30px;
+    padding-right: 15px;
     font-size: 26px;
     color: rgb(0, 0, 0);
-    z-index: 4100;
+    z-index: 8000;
     cursor: pointer;
-    top: 70px;
+    top: 65px;
     right: 15px; 
+    position: fixed;
   }
 
   .menu {
     position:fixed;
     top: 0;
-    right: -260px;   
+    right: -220px;   
     width: 200px;
     height: 100vh;
     background: rgb(28, 124, 184);
@@ -551,14 +528,15 @@ a:hover {
     flex-direction: column;
     padding-top: 75px;
     transition: right 0.3s ease;
-    z-index: 4000;
+    z-index: 6000;
     box-shadow: -4px 0 20px rgba(0,0,0,0.3); 
+    margin-bottom: 100px;
   }
 
   .menu a {
-    padding: 16px 40px;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 50px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.621);
     color: rgb(255, 255, 255);
   }
 
@@ -573,7 +551,7 @@ a:hover {
     position: fixed;
     top: 0;
     left: -220px;
-    width: 200px;
+    width: 150px;
     height: 100vh;
     background: #0f79bc;
     flex-direction: column;
@@ -590,11 +568,11 @@ a:hover {
   .dropdown-toggle {
     display: block;
     position: fixed;
-    top: 75px;
+    top: 65px;
     left: 15px;
     font-size: 26px;
-    z-index: 5100;
-    cursor: pointer;
+    z-index: 8000;
+    cursor: pointer
   }
 
   .dropdown {
@@ -623,7 +601,7 @@ a:hover {
 
     .dropdown-content a {
     padding-left: 30px;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .dropdown.open .dropdown-content {
@@ -655,7 +633,11 @@ a:hover {
     flex-direction: column;
     margin: 10px;
   }
-  .text,.h2
+  .text,.h2{
+   
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
   .IMG {
     width: 100%;
@@ -841,8 +823,69 @@ a:hover {
   }
 
 }
-@media (min-width: 900px) and (max-width: 1024px) {
-  .cardI1 {
-    max-width: 30%;
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  body {
+    padding-top: 180px;
   }
+
+  .gallery-slider {
+    height: 600px;
+    max-width: 1100px;
+  }
+
+  .slider img {
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .cardI {
+    max-width: 300px;
+  }
+
+  .cardI1 {
+    max-width: 350px;
+  }
+
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+
+  .gallery-slider {
+    height: 700px;
+    max-width: 1300px;
+  }
+
+  .slider img {
+    height: 700px;
+  }
+
+  .cardI {
+    max-width: 350px;
+  }
+
+  .cardI1 {
+    max-width: 400px;
+  }
+
+}
+
+@media (min-width: 1921px) {
+
+  .gallery-slider {
+    height: 800px;
+    max-width: 1600px;
+  }
+
+  .slider img {
+    height: 800px;
+  }
+
+  .main-container {
+    max-width: 1800px;
+    margin: auto;
+  }
+
 }
