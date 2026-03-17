@@ -286,6 +286,44 @@ a:hover {
   color: #eb3f75;
   transform: translateY(-4px);
 }
+.feedback-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 22px;
+background:linear-gradient(135deg,#007bff,#00c6ff);
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+border-radius:25px;
+transition:0.3s;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.feedback-btn:hover{
+background:linear-gradient(135deg,#0056b3,#0096c7);
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+}
+.contact-btn{
+display:inline-block;
+margin-left:10px;
+padding:8px 16px;
+background:linear-gradient(135deg,#007bff,#00c6ff);
+color:white;
+text-decoration:none;
+border-radius:20px;
+font-size:14px;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contact-btn:hover{
+background:linear-gradient(135deg,#0056b3,#0096c7);
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
 
 .dropdown-toggle {
   display: none;
@@ -535,13 +573,15 @@ a:hover {
 Frontend demo using IndexedDB (Permanent browser storage)
 </div>
 </div>
-    <!-- Footer -->
+<hr>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-about">
         <h3>Best Education</h3>
         <p> Visit The Budhha Institute Of Technology
           :- Plot No : B-3 (P), Industrial Area, Gaya NH:22, Gaya-Dobhi Road, Near Tekuna Farm, Gaya Bihar - 823004!</p>
+           <a href="feedback.html" class="feedback-btn">Student Feedback</a>
+            <a href="complain.html" class="feedback-btn">Lodge Complaint</a>
       </div>
 
       <div class="footer-links">
@@ -561,27 +601,23 @@ Frontend demo using IndexedDB (Permanent browser storage)
       <div class="footer-contact">
         <h4>Contact Us</h4>
         <p>📍 Gaya, Bihar - 823004</p>
-        <p>📞 +91-9006246620</p>
-        <p>📧 manushankar1318@gmail.com</p>
-        
-  <div class="footer-social">
-    <a href="https://www.instagram.com/many.shan.kar/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/manu.shankar.875023" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://x.com/manushankar1318" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <p>📞 +91-9934044018 , 7033351111</p>
+        <p>📧 bodhgayabit@gmail.com</p>
+        <div class="footer-social">
+    <a href="https://www.instagram.com/bit_gaya/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/bitgayabihar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    
     </div>
-    <div class="footer-social">
-    <a href="https://www.linkedin.com/in/manushankar-kumar-7b51a1322/?skipRedirect=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-     <a href="https://github.com/manyshankar" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
+
 
       </div>
-    </div>
 
+    </div>  
     <div class="footer-bottom">
-      <p>2026 Buddha Institute of Technology Gaya | Designed by Manushankar Kumar</p>
+      <p>2026 Buddha Institute of Technology Gaya | Designed by Manushankar Kumar  <a href="manu.html" class="feedback-btn">Contact With Manushankar</a></p>
+       
     </div>
   </footer>
-
 <script>
 /*  IndexedDB  */
 let db;
