@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT</title>
+  <link rel="icon" type="image/png" href="picture/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+margin:0;
+padding:0;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+max-width:90%;
+margin:40px auto;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+</style>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo-section">
+      <a href="#"><img src="picture/BIT LOGO.png" alt="Logo"></a>
+      <a href="#" class="logo">Budhha Institute Of Technology</a>
+    </div>
+</div>
+<div class="navbar1">
+<div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div> 
+    <div class="menu">
+      <a href="index.html" class="link">HOME</a>
+      <a href="https://sbte.bihar.gov.in/" class="link">SBTE</a>
+      <a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/" class="link">MNSSBY</a>
+      <a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607" class="link">DigiLocker</a>
+       <a href="https://sbteonline.bihar.gov.in/login" class="link">EMS Portal</a>
+        <a href="https://sbtelms.bihar.gov.in/" class="link">LMS Portal</a>
+      <a href="mydoc.html" class="link btn">MY DOCUMENT</a>
+      <a href="Contact.html" class="link">Contact</a>
+    </div>
+  </div>
+
+  <div class="sub-navbar">
+<div class="dropdown-toggle" onclick="toggledropdown()">
+  <i class="fas fa-bars"></i>
+</div>
+    <div class="dropdown">
+    <a href="#" class="dropbtn" onclick="openSub(this, event)">Institute ▾</a>
+    <div class="dropdown-content">
+      <a href="About.html">About</a>
+    <a href="facility.html">Facility</a>
+    <a href="Gallery.html">Service</a>
+     <a href="rules.html">Rules</a>
+       <a href="engineering.html">Engineering</a>
+        <a href="service.html">Gallery</a>
+    </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">Admission ▾</a>
+      <div class="dropdown-content">
+        <a href="admission.html">Admission</a>
+        <a href="free.html">Fees Structure</a>
+        <a href="admissionEligi.html">Admission Eligibility</a>
+           <a href="studentform.html">Apply here</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Diploma ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="mech.html">Machanical Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">B-TECH ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Academics ▾</a>
+      <div class="dropdown-content">
+        <a href="https://sbte.bihar.gov.in/academic-calendar">Academic Calendar</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Registration</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Enrollments</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Exam Result</a>
+        <a href="https://sbte.bihar.gov.in/e-content-virtual-labs">E-Content & Virtual Labs</a>
+        <a href="https://sbte.bihar.gov.in/previous-year-questions">Previous Year Questions</a>
+        <a href="https://sbte.bihar.gov.in/question-answer-key">Question Answer Key</a>
+      </div>
+    </div>
+    </div>
+  </div><br>
+
+  <div class="main-container">
+    <div class="card5">
+      <div class="card">
+        <img src="picture/bitbgm3.jpg" class="img1">
+      </div>
+    </div>
+  </div>
+  <hr>
+<div class="container">
+
+<h2>Complaint Form</h2>
+<form id="complaintForm" action="https://formsubmit.co/manushankar1318@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Complaint Received">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>You Are</label>
+<select name="role" id="role" onchange="changeForm()" required>
+<option value="">Select</option>
+<option value="Student">Student</option>
+<option value="Teacher">Teacher / Faculty</option>
+</select>
+
+<div id="studentFields" style="display:none">
+<label>Board Roll Number</label>
+<input type="text" name="roll">
+</div>
+
+<div id="teacherFields" style="display:none">
+<label>Department</label>
+<input type="text" name="department">
+</div>
+
+<label>Mobile Number</label>
+<input type="text" name="mobile" required>
+
+<label>Message</label>
+<textarea name="message" rows="4" required></textarea>
+
+<button type="submit">Submit Complaint</button>
+
+</form>
+</div>
+<h2 class="complaint-title">Complaints List</h2>
+
+<div class="table-container">
+
+<table class="complaint-table">
+
+<thead>
+<tr>
+<th>Complaint ID</th>
+<th>Name</th>
+<th>Role</th>
+<th>Message</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="complaintList"></tbody>
+
+</table>
+
+</div>
+<br><br>
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Best Education</h3>
+        <p> Visit The Budhha Institute Of Technology
+          :- Plot No : B-3 (P), Industrial Area, Gaya NH:22, Gaya-Dobhi Road, Near Tekuna Farm, Gaya Bihar - 823004!</p>
+           <a href="feedback.html" class="feedback-btn">Student Feedback</a>
+            <a href="complain.html" class="feedback-btn">Lodge Complaint</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="https://sbte.bihar.gov.in/">SBTE</a></li>
+          <li><a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/">MNSSBY</a></li>
+            <li><a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607">DigiLocker</a></li>
+              <li><a href="https://sbteonline.bihar.gov.in/login">EMS Portal</a></li>
+                <li><a href="https://sbtelms.bihar.gov.in/">LMS Portal</a></li>
+          <li><a href="mydoc.html">MY DOCUMENT</a></li>
+           <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Gaya, Bihar - 823004</p>
+        <p>📞 +91-9934044018 , 7033351111</p>
+        <p>📧 bodhgayabit@gmail.com</p>
+        <div class="footer-social">
+    <a href="https://www.instagram.com/bit_gaya/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/bitgayabihar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    
+    </div>
+
+
+      </div>
+
+    </div>  
+    <div class="footer-bottom">
+      <p>2026 Buddha Institute of Technology Gaya | Designed by Manushankar Kumar  <a href="manu.html" class="feedback-btn">Contact With Manushankar</a></p>
+       
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("show");
+}
+
+function toggledropdown() {
+  document.querySelector(".sub-navbar").classList.toggle("show");
+}
+
+function openSub(el, e) {
+  e.preventDefault();
+  const parent = el.parentElement;
+
+  document.querySelectorAll(".sub-navbar .dropdown")
+    .forEach(d => {
+      if (d !== parent) d.classList.remove("open");
+    });
+
+  parent.classList.toggle("open");
+}
+
+function changeForm(){
+
+var role=document.getElementById("role").value;
+
+document.getElementById("studentFields").style.display="none";
+document.getElementById("teacherFields").style.display="none";
+
+if(role==="Student"){
+document.getElementById("studentFields").style.display="block";
+}
+
+if(role==="Teacher"){
+document.getElementById("teacherFields").style.display="block";
+}
+
+}
+
+
+document.getElementById("complaintForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let formData = new FormData(this);
+
+let data = {
+
+name:formData.get("name"),
+role:formData.get("role"),
+extra:formData.get("roll") || formData.get("department"),
+mobile:formData.get("mobile"),
+message:formData.get("message")
+
+};
+
+
+fetch("https://script.google.com/macros/s/AKfycbwX9sU64WZsD5PA29IeSehGNtcjy6D089np0X-hUCqXkO1xWA9n-bXJSmqRvg7WCZXI/exec",{
+
+method:"POST",
+body:JSON.stringify(data)
+
+})
+
+.then(res=>res.json())
+
+.then(res=>{
+
+alert("Complaint Submitted Successfully\nYour Complaint ID: "+res.id);
+
+document.getElementById("complaintForm").reset();
+
+});
+
+});
+
+function loadComplaints(){
+
+fetch("https://script.google.com/macros/s/AKfycbwX9sU64WZsD5PA29IeSehGNtcjy6D089np0X-hUCqXkO1xWA9n-bXJSmqRvg7WCZXI/exec")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let html="";
+
+data.forEach(c=>{
+
+html += `
+<tr>
+<td>${c.id}</td>
+<td>${c.name}</td>
+<td>${c.role}</td>
+<td>${c.message}</td>
+<td>${c.status}</td>
+</tr>
+`;
+
+});
+
+document.getElementById("complaintList").innerHTML = html;
+
+});
+
+}
+
+loadComplaints();
+
+</script>
+
+
+</body>
+
+</html>

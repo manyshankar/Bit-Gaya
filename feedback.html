@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT</title>
+  <link rel="icon" type="image/png" href="picture/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <Style>
+.review-container{
+display:flex;
+justify-content:center;
+margin:40px 0;
+}
+
+.review-form{
+width:420px;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.review-form input,
+.review-form textarea{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+transition:0.3s;
+}
+
+.review-form input:focus,
+.review-form textarea:focus{
+border-color:#007bff;
+outline:none;
+box-shadow:0 0 5px rgba(0,123,255,0.4);
+}
+
+.review-form textarea{
+height:100px;
+resize:none;
+}
+
+.rating{
+display:flex;
+gap:8px;
+font-size:30px;
+cursor:pointer;
+justify-content:center;
+}
+
+.star{
+color:#ccc;
+cursor:pointer;
+transition:0.3s;
+}
+
+.star:hover{
+color:#ffc107;
+transform:scale(1.2);
+}
+
+.star.active{
+color:#ffc107;
+}
+
+.review-form button{
+padding:12px;
+border:none;
+border-radius:25px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+background:linear-gradient(135deg,#007bff,#00c6ff);
+color:white;
+transition:0.3s;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.review-form button:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(0,0,0,0.3);
+background:linear-gradient(135deg,#0056b3,#0096c7);
+}
+
+.review-card{
+display:flex;
+gap:15px;
+background:white;
+padding:15px;
+margin:15px auto;
+width:65%;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.review-avatar{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#007bff;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:20px;
+}
+
+.review-content h4{
+margin:0;
+font-size:16px;
+}
+
+.stars{
+color:#ffc107;
+font-size:18px;
+}
+
+.review-content p{
+margin-top:5px;
+font-size:14px;
+color:#555;
+}
+  </Style>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo-section">
+      <a href="#"><img src="picture/BIT LOGO.png" alt="Logo"></a>
+      <a href="#" class="logo">Budhha Institute Of Technology</a>
+    </div>
+</div>
+<div class="navbar1">
+<div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div> 
+    <div class="menu">
+      <a href="index.html" class="link">HOME</a>
+      <a href="https://sbte.bihar.gov.in/" class="link">SBTE</a>
+      <a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/" class="link">MNSSBY</a>
+      <a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607" class="link">DigiLocker</a>
+       <a href="https://sbteonline.bihar.gov.in/login" class="link">EMS Portal</a>
+        <a href="https://sbtelms.bihar.gov.in/" class="link">LMS Portal</a>
+      <a href="mydoc.html" class="link btn">MY DOCUMENT</a>
+      <a href="Contact.html" class="link">Contact</a>
+    </div>
+  </div>
+
+  <div class="sub-navbar">
+<div class="dropdown-toggle" onclick="toggledropdown()">
+  <i class="fas fa-bars"></i>
+</div>
+    <div class="dropdown">
+    <a href="#" class="dropbtn" onclick="openSub(this, event)">Institute ▾</a>
+    <div class="dropdown-content">
+      <a href="About.html">About</a>
+    <a href="facility.html">Facility</a>
+    <a href="Gallery.html">Service</a>
+     <a href="rules.html">Rules</a>
+       <a href="engineering.html">Engineering</a>
+        <a href="service.html">Gallery</a>
+    </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">Admission ▾</a>
+      <div class="dropdown-content">
+        <a href="admission.html">Admission</a>
+        <a href="free.html">Fees Structure</a>
+        <a href="admissionEligi.html">Admission Eligibility</a>
+           <a href="studentform.html">Apply here</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Diploma ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="mech.html">Machanical Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+
+    </div>
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn"onclick="openSub(this, event)">B-TECH ▾</a>
+      <div class="dropdown-content">
+        <a href="comscieng.html">Com Sci Engg</a>
+        <a href="civil.html">Civil Engg</a>
+        <a href="electrical.html">Eelecrical Engg</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" class="dropbtn" onclick="openSub(this, event)">Academics ▾</a>
+      <div class="dropdown-content">
+        <a href="https://sbte.bihar.gov.in/academic-calendar">Academic Calendar</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Registration</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Enrollments</a>
+        <a href="https://sbteonline.bihar.gov.in/login">Exam Result</a>
+        <a href="https://sbte.bihar.gov.in/e-content-virtual-labs">E-Content & Virtual Labs</a>
+        <a href="https://sbte.bihar.gov.in/previous-year-questions">Previous Year Questions</a>
+        <a href="https://sbte.bihar.gov.in/question-answer-key">Question Answer Key</a>
+      </div>
+    </div>
+    </div>
+  </div><br>
+
+  <div class="main-container">
+    <div class="card5">
+      <div class="card">
+        <img src="picture/bitbgm3.jpg" class="img1">
+      </div>
+    </div>
+  </div>
+  <hr>
+<h2 style="text-align:center;">Student Reviews</h2>
+
+<div class="review-container">
+
+<form id="reviewForm" class="review-form">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="batch" placeholder="Your Batch (2023-26)" required>
+
+<textarea id="review" placeholder="Write your review..." required></textarea>
+
+<div class="rating">
+<i class="fa-solid fa-star star" data-value="1"></i>
+<i class="fa-solid fa-star star" data-value="2"></i>
+<i class="fa-solid fa-star star" data-value="3"></i>
+<i class="fa-solid fa-star star" data-value="4"></i>
+<i class="fa-solid fa-star star" data-value="5"></i>
+</div>
+
+<button type="submit">Submit Review</button>
+
+</form>
+
+</div>
+
+<h3 style="text-align:center">Average Rating: <span id="avgRating">0</span> ⭐</h3>
+
+<div id="reviewList" class="review-list"></div>
+<br>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Best Education</h3>
+        <p> Visit The Budhha Institute Of Technology
+          :- Plot No : B-3 (P), Industrial Area, Gaya NH:22, Gaya-Dobhi Road, Near Tekuna Farm, Gaya Bihar - 823004!</p>
+           <a href="feedback.html" class="feedback-btn">Student Feedback</a>
+            <a href="complain.html" class="feedback-btn">Lodge Complaint</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="https://sbte.bihar.gov.in/">SBTE</a></li>
+          <li><a href="https://www.7nishchay-yuvaupmission.bihar.gov.in/">MNSSBY</a></li>
+            <li><a href="https://www.digilocker.gov.in/web/dashboard/issuers/000607">DigiLocker</a></li>
+              <li><a href="https://sbteonline.bihar.gov.in/login">EMS Portal</a></li>
+                <li><a href="https://sbtelms.bihar.gov.in/">LMS Portal</a></li>
+          <li><a href="mydoc.html">MY DOCUMENT</a></li>
+           <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Gaya, Bihar - 823004</p>
+        <p>📞 +91-9934044018 , 7033351111</p>
+        <p>📧 bodhgayabit@gmail.com</p>
+        <div class="footer-social">
+    <a href="https://www.instagram.com/bit_gaya/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/bitgayabihar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    
+    </div>
+
+
+      </div>
+
+    </div>  
+    <div class="footer-bottom">
+      <p>2026 Buddha Institute of Technology Gaya | Designed by Manushankar Kumar  <a href="manu.html" class="feedback-btn">Contact With Manushankar</a></p>
+       
+    </div>
+  </footer>
+
+
+<script>
+
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("show");
+}
+
+function toggledropdown() {
+  document.querySelector(".sub-navbar").classList.toggle("show");
+}
+
+function openSub(el, e) {
+  e.preventDefault();
+  const parent = el.parentElement;
+
+  document.querySelectorAll(".sub-navbar .dropdown").forEach(d => {
+    if (d !== parent) d.classList.remove("open");
+  });
+
+  parent.classList.toggle("open");
+}
+
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbwckZgLpt7KzQzigGxeZ8z_CPZ0RhqnmCxYNahHWrklHHkj7KtIYCbDdI0G2nk8--JU/exec";
+
+let rating = 0;
+const stars = document.querySelectorAll(".star");
+
+
+stars.forEach((star, index) => {
+
+  star.addEventListener("click", () => {
+
+    rating = index + 1;
+
+    stars.forEach(s => s.classList.remove("active"));
+
+    for (let i = 0; i < rating; i++) {
+      stars[i].classList.add("active");
+    }
+
+  });
+
+});
+
+
+document.getElementById("reviewForm").addEventListener("submit", function (e) {
+
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let batch = document.getElementById("batch").value;
+  let review = document.getElementById("review").value;
+
+  if (rating == 0) {
+    alert("Please select rating");
+    return;
+  }
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      batch: batch,
+      review: review,
+      rating: rating
+    })
+  })
+
+  .then(res => res.text())
+  .then(() => {
+
+    alert("Review Submitted Successfully");
+
+    document.getElementById("reviewForm").reset();
+
+    stars.forEach(s => s.classList.remove("active"));
+    rating = 0;
+
+    loadReviews();
+
+  });
+
+});
+
+
+function loadReviews() {
+
+  fetch(scriptURL)
+  .then(res => res.json())
+  .then(data => {
+
+    let container = document.getElementById("reviewList");
+
+    container.innerHTML = "";
+
+    let total = 0;
+
+    data.forEach(r => {
+
+      let starHTML = "⭐".repeat(r[4]);
+
+      total += Number(r[4]);
+
+      container.innerHTML += `
+
+      <div class="review-card">
+        <div class="review-avatar">${r[1].charAt(0)}</div>
+        <div class="review-content">
+          <h4>${r[1]} (${r[2]})</h4>
+          <div class="stars">${starHTML}</div>
+          <p>${r[3]}</p>
+        </div>
+      </div>
+
+      `;
+
+    });
+
+    if (data.length > 0) {
+      let avg = (total / data.length).toFixed(1);
+      document.getElementById("avgRating").innerText = avg;
+    }
+
+  });
+
+}
+
+
+loadReviews();
+
+</script>
+
+
+</body>
+
+</html>
