@@ -8,35 +8,46 @@
   <link rel="icon" type="image/png" href="picture/logo.jpg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
+<style>
+
+
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
+/* BODY */
 
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#f4f4f4;
-margin:0;
-padding:0;
+margin-top:150px;
 }
+
+/* COMPLAINT FORM */
 
 .container{
 background:white;
 padding:30px;
 border-radius:10px;
 width:400px;
-max-width:90%;
+max-width:95%;
 margin:40px auto;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 h2{
 text-align:center;
+margin-bottom:15px;
 }
 
 input,select,textarea{
 width:100%;
-padding:10px;
+padding:15px;
 margin:8px 0;
 border:1px solid #ccc;
 border-radius:5px;
+font-size:14px;
 }
 
 button{
@@ -53,6 +64,74 @@ cursor:pointer;
 button:hover{
 background:#0056b3;
 }
+
+/* TABLE */
+
+.table-container{
+width:95%;
+margin:auto;
+overflow-x:auto;
+}
+
+.complaint-table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+.complaint-table th,
+.complaint-table td{
+padding:10px;
+border:1px solid #ccc;
+text-align:center;
+}
+
+.complaint-table th{
+background:#004080;
+color:white;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+body{
+margin-top:10px;
+}
+
+.container{
+width:90%;
+padding:23px;
+}
+
+.complaint-table th,
+.complaint-table td{
+font-size:13px;
+padding:8px;
+}
+
+}
+
+@media (max-width:480px){
+
+.container{
+padding:15px;
+padding-right: 100px;
+margin-right: 100px;
+}
+
+button{
+font-size:14px;
+}
+
+.complaint-table th,
+.complaint-table td{
+font-size:12px;
+padding:6px;
+}
+
+}
+
 </style>
 
 </head>
